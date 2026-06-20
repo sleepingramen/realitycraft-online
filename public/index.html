@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RealityCraft Online</title>
+<link rel="stylesheet" href="style.css">
+<script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+
+<h1>🌌 RealityCraft Online</h1>
+
+<div id="setup">
+  <input id="name" placeholder="Name"><br>
+
+  <select id="hair">
+    <option>Short</option>
+    <option>Long</option>
+    <option>Spiky</option>
+  </select>
+
+  <select id="eyes">
+    <option>Round</option>
+    <option>Sharp</option>
+    <option>Glowing</option>
+  </select>
+
+  <button onclick="create()">Enter World</button>
+</div>
+
+<div id="game" style="display:none">
+
+  <h2 id="me"></h2>
+
+  <div class="card">
+    <input id="chatInput" placeholder="chat...">
+    <button onclick="sendChat()">Send</button>
+  </div>
+
+  <div class="card">
+    <button onclick="battle()">⚔️ Battle</button>
+  </div>
+
+  <div class="card">
+    <h3>👥 Players</h3>
+    <div id="players"></div>
+  </div>
+
+  <div class="card">
+    <h3>💬 Chat</h3>
+    <div id="chat"></div>
+  </div>
+
+  <div id="question"></div>
+
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
